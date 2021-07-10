@@ -47,7 +47,7 @@ class LineFollower():
 		
 		LeftImageData = self.__Normalize(sim.simxGetVisionSensorImage(self.clientID,self.LSensor,0,sim.simx_opmode_buffer)[-1])
 		RightImageData = self.__Normalize(sim.simxGetVisionSensorImage(self.clientID,self.RSensor,0,sim.simx_opmode_buffer)[-1])
-		#print(f'{LeftImageData} {RightImageData}')
+		print(f'{LeftImageData} {RightImageData}')
 
 		'''
 		Negro = 0 ; Blanco = 1
@@ -116,7 +116,6 @@ class LineFollower():
 		
 	def __CallScript(self):
 		sim.simxCallScriptFunction(self.clientID,'',sim.sim_scripttype_childscript (1),'RoboticHand',[],[],[],bytearray(),sim.simx_opmode_blocking)
-		print('hola')
 
 Car = LineFollower(2429)
 Car.Handles('robot_cuerpo','LeftMotor','RightMotor','LeftSensor','RightSensor','BColorSensor','BAproxSensor')
