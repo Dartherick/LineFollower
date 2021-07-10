@@ -116,6 +116,7 @@ class LineFollower():
 		
 	def __CallScript(self):
 		sim.simxCallScriptFunction(self.clientID,'',sim.sim_scripttype_childscript (1),'RoboticHand',[],[],[],bytearray(),sim.simx_opmode_blocking)
+		print('hola')
 
 Car = LineFollower(2429)
 Car.Handles('robot_cuerpo','LeftMotor','RightMotor','LeftSensor','RightSensor','BColorSensor','BAproxSensor')
