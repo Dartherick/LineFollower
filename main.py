@@ -113,7 +113,7 @@ class LineFollower():
 		sim.simxEndDialog(self.clientID,DialogHandle,sim.simx_opmode_oneshot)
 		sim.simxStopSimulation(self.clientID,sim.simx_opmode_oneshot)
 		exit()
-
+		
 	def __CallScript(self):
 		sim.simxCallScriptFunction(self.clientID,'',sim.sim_scripttype_childscript (1),'RoboticHand',[],[],[],bytearray(),sim.simx_opmode_blocking)
 
